@@ -1,4 +1,4 @@
-package mufeng;
+package com.wisetein;
 
 import org.apache.maven.model.Resource;
 import org.apache.maven.plugin.AbstractMojo;
@@ -113,7 +113,6 @@ public class MfMojo extends AbstractMojo{
         for(File sourceFile : collected){
             lines += countLine(sourceFile);
         }
-        getLog().info(basedir.getAbsolutePath() + ":length : " + basedir.getAbsolutePath().length());
         String path = dir.getAbsolutePath().substring(basedir.getAbsolutePath().length());
         getLog().info(path + ": " + lines + " lines of code in " + collected.size() + "files");
     }
